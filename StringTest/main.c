@@ -17,8 +17,10 @@ int main() {
 	char grade;
 	char name[20];
 
-	printf("학점과 이름을 입력하세여 : ");
-	scanf("%c %s", &grade, name);
+	printf("학점:");
+	scanf("%c", &grade);
+	printf("이름:");
+	scanf("%s", name);
 	printf("%s의 학점은 %c입니다.\n", name, grade);
 	//printf("나이는 %d살, 키는 %.1lfcm입니다.\n", age, height);
 	
