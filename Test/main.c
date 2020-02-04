@@ -24,12 +24,12 @@ int main(void)
     //short sh;
     //scanf("%d", &sh);
     */
-
+    /*
     int i;
     int j;
     int k;
 
-    for (i = 0; i < 3; i++) 
+    for (i = 0; i < 3; i++)
     {
         for (k = 3 - i; k > 0; k--) {
             printf(" ");
@@ -38,12 +38,23 @@ int main(void)
             printf("*");
         }
         printf("\n");
-                
-          
-        
-        
+
+
+
+
     }
-   
+
     return 0;
-    
+
+}
+*/
+
+//char str[80] = { 'p','i' };
+//char str[] = "elephant";
+    char str[] = { "sun","moon" };
+    printf("%s", str);
+    int count;
+    count = sizeof(str) / sizeof(str[0]);
+    printf("%d", count);
+
 }
