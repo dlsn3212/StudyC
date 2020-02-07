@@ -130,4 +130,88 @@ int main(void)
 }
 sizeof(~~)·Î sizeof»ç¿ë
 
+
+
+int main(void)
+{
+    int a = 1;
+    int b = 1;
+
+    while (a <= 10)
+    {
+        a = a * 2;
+        printf("%d\n", a);
+       
+    }
+
+    do
+    {
+        b = b * 2;
+        printf("%d\n", b);
+    } while (b <= 10);
+    return 0;
+}
+
+
+int main(void)
+{
+    int i;
+    for (i = 0; i < 10; i++)
+    {
+        printf("$");
+
+    }
+    return 0;
+
+}
+
+
+int main(void)
+{
+    int i;
+    int j;
+    int tot;
+
+    for (i = 2; i < 10; i++)
+    {
+        for (j = 1; j < 10; j++)
+        {
+            printf("%d X %d = %d\n", i, j, i * j);
+        }
+
+        printf("\n");
+    }
+}
+
+
+int main(void)
+{
+    int i, j;
+
+    for (i = 0; i < 3; i++)
+    {
+        for (j = 0; j < 4; j++) {
+            printf("Be Happy\n");
+            if (j == 2) break;
+        }
+    }
+}
 */
+
+int main(void)
+{
+    int i, j,k;
+
+    for (i = 0; i < 5; i++)
+    {
+        for (j = 0; j < 5; j++)
+        {
+            if ((i == j) && (i + j == 4))
+            {
+                printf("*");
+            }
+            else
+                printf(" ");
+        }
+    }
+}
