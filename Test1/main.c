@@ -196,22 +196,106 @@ int main(void)
         }
     }
 }
-*/
+
 
 int main(void)
 {
-    int i, j,k;
+    int i, j;
+    int k = 1;
 
-    for (i = 0; i < 5; i++)
+    for (i = 0; i < 3; i++)
     {
         for (j = 0; j < 5; j++)
         {
-            if ((i == j) && (i + j == 4))
+            if (i + j > k)
             {
                 printf("*");
+                k = k + 2;
             }
             else
                 printf(" ");
         }
+        printf("\n");
     }
+}
+*/
+/*
+int main(void)
+{
+    int i, j,k;
+    for (i = 1; i < 4; i++)
+    {
+        for (j = 3; j >= i; j--)
+        {
+            printf(" ");
+        }
+        for (k = 1; k <= i * 2 - 1; k++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+*삼각형만들기
+*/ 
+/*
+double centi_to_meter(int cm);
+
+int main(void)
+{
+    double res;
+
+    res = centi_to_meter(187);
+    printf("%.2lfm\n", res);
+}
+
+double centi_to_meter(int cm)
+{
+    
+    double a;
+
+    a = cm / 100.0;
+
+    return a;
+}
+*/
+/*
+int get_num(void);
+
+int main(void)
+{
+    int result;
+
+    result = get_num();
+    printf("반환값 : %d\n", result);
+    return 0;
+}
+
+int get_num(void)
+{
+    int num;
+    printf("양수 입력 : ");
+    scanf("%d", &num);
+
+    return num;
+    
+}
+*/
+int sum(int num);
+
+int main(void)
+{
+    sum(10);
+    sum(100);
+
+    return 0;
+}
+
+int sum(int num)
+{
+    int tot = 0;
+    for (int count = 1; count <= num; count++)
+    {
+        tot += count;
+    }
+    printf("1부터 %d까지의 합은 : %d\n", num, tot);
 }
