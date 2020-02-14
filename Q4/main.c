@@ -16,14 +16,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void insertNode(struct NODE* next);
+NODE* insertNode(struct NODE* next);
 
-struct NODE
+typedef struct NODE
 {
     
     float num;
     struct NODE* next;
-};
+}NODE;
 
 
 // 메인함수
@@ -37,7 +37,7 @@ int main(void)
 
     current = head;
 
-    insertNode(&c);
+    head=insertNode(&c);
 
     while (current != NULL)
     {
@@ -51,7 +51,7 @@ int main(void)
     //deleteNode로 원하는 위치값 삭제
     //노드의 갯수만큼 데이터를 출력하는 함수 printNode()
 
-void insertNode(struct NODE *next)
+NODE *insertNode(NODE *next)
 {
     struct NODE d = { 60,0 };
     struct NODE* head = &d;

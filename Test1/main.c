@@ -8,8 +8,9 @@
 */
 
 #include <stdio.h>
-#include <stdlib.h>
+//#include <stdlib.h>
 #include <string.h>
+
 
 // 메인함수
 /*
@@ -363,4 +364,169 @@ int main()
     return 0;
 }
 */
+/*
+int main()
+{
+    int size;
+    scanf("%d", &size);
+
+    int* numptr = malloc(sizeof(int) * size);
+
+    for (int i = 0; i < size; i++)
+    {
+        numptr[i] = i;
+    }
+
+    for (int i = 0; i < size; i++)
+    {
+        printf("%d\n", numptr[i]);  
+    }
+    free(numptr);
+
+    return 0;
+}
+size입력받아 동적 메모리 할당
+*/
+/*
+int main()
+{
+    int** m = malloc(sizeof(int*) * 3);
+    //이중 포인터에 (int포인터 크기 *세로크기)만큼 동적메모리할당,배열의세로
+
+    for (int i = 0; i < 3; i++) {
+        m[i] = malloc(sizeof(int*) * 4);
+        //int크기 * 가로크기 동적메모리 할당
+    }
+    m[0][0] = 1;
+    m[2][0] = 5;
+
+    for (int i = 0; i < 3; i++)
+    {
+        freemm(m[i]);//가로공간메모리해제
+    }
+    free(m);//세로 공간 메모리 해제
+}//동적메모리할당,2차원배열 
+
+*/
+/*
+typedef struct _Person {
+    char name[20];
+    int age;
+    char address[100];
+} Person;
+
+int main()
+{
+    Person* p1 = malloc(sizeof(Person));//구조체 별칭포인터선, 메모리할당
+
+    strcpy(p1->name, "홍길동");
+    p1->age = 30;
+    strcpy(p1->address, "부산");
+
+    free(p1);//동적 메모리 해제
+}구조체 포인터에 동적 메모리 할당
+*/
+/*
+struct Person {
+    char name[20];
+    int age;
+    char addree[100];
+};
+
+int main()
+{
+    struct Person p1;//구조체 변수 선언
+    struct Person* ptr;//구조체 포인터 선언
+    //선언까지는 ptr과 p1이 관계가 없음
+
+    ptr = &p1;//p1의 메모리 주소를 구하여 ptr에 할당
+
+    ptr->age = 40;
+
+    //구조체 포인터에서는 ->
+
+}
+*/
+
+/*
+struct point {
+    int x;
+    int y;
+};
+
+int main()
+{
+    struct point p1;
+    memset(&p1, 0, sizeof(struct point));
+    malloc함수사용
+    struct point *p1 = malloc(sizeof(struct point));
+    memset(p1,0,sizeof(struct point));
+    p1이 주소를 담고있으므로 &빠짐
+    
+*/
+/*
+struct point {
+    int x;
+    int y;
+};
+int main()
+{
+    struct point* p[3];
+
+    for (int i = 0; i < sizeof(p) / sizeof(struct point*); i++)
+    {
+        p[i] = malloc(sizeof(struct point));
+    }
+    //sizeof(struct point)는 구조체가 차지하는 크기
+    //sizeof(struct point*)는 구조체 포인터의 크기
+    for (int i = 0; i < sizeof(struct point) / sizeof(struct point*); i++)
+    {
+        free(p[i]);
+    }
+    p[0]->x = 10;
+    p[0]->y = 20;
+    p[1]->x = 30;
+    p[1]->y = 40;
+
+}
+*/
+
+void swap(int *first, int *second)
+{
+    int temp;
+
+    temp = *first;
+    *first = *second;
+    *second = temp; //매개변수를 포인터로 사용하면 함수바깥으로
+    //여러개의 값을 전달할 수 있음.
+   //메모리 주소에 접근해서 값을 저장하기때문에.
+}
+/*
+int main()
+{
+    int num1 = 10;
+    int num2 = 20;
+    swap(&num1, &num2);
+    printf("%d %d\n", num1, num2);
+
+    return 0;
+}
+*/
+/*
+void allocmemory(void** ptr, int size)
+{
+    *ptr = malloc(size);
+}
+
+int main()
+{
+    long long* numptr = NULL;
+    allocmemory(&numptr, sizeof(long long));
+    *numptr = 10;
+    printf("%lld\n", *numptr);
+    free(numptr);
+    return 0;
+}
+*/
+   
 
