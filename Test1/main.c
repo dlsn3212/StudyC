@@ -9,6 +9,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 // 메인함수
 /*
@@ -280,6 +281,7 @@ int get_num(void)
     
 }
 */
+/*
 int sum(int num);
 
 int main(void)
@@ -299,3 +301,66 @@ int sum(int num)
     }
     printf("1부터 %d까지의 합은 : %d\n", num, tot);
 }
+*/
+/*
+int* ten()
+{
+    int* numptr = malloc(sizeof(int));
+    *numptr = 10;
+    return numptr;
+
+}
+
+int main() {
+    int* numptr;
+    numptr = ten();
+    printf("%d\n", *numptr);
+    free(numptr);
+
+    return 0;
+}
+*/
+
+/*
+char* helloLiteral()
+    {
+        char* s1 = "hello";
+        return s1;
+    }
+char* helloDynamicM() {
+    char* s1 = malloc(sizeof(char) * 20);
+    strcpy(s1, "hello");
+    return s1;                  
+}
+
+int main()
+{
+    char* s1;   
+    char* s2;
+
+    s1 = helloLiteral();
+    s2 = helloDynamicM();
+
+    printf("%s\n", s1);
+    printf("%s\n", s2);
+    free(s2);
+
+    return 0;
+}
+*/
+/*
+int main()
+{
+    int A[3] = { 1,2,3 };
+    int B[10];
+    int i;
+
+    for (i = 0; i < 10; i++)
+    {
+        B[i] = A[i % 3];
+        printf("%d\t", B[i]);
+    }
+    return 0;
+}
+*/
+
